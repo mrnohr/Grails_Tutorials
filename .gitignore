@@ -1,0 +1,23 @@
+# Eclipse #
+###################
+.metadata
+Servers
+.classpath
+.project
+.settings
+target-eclipse
+
+# Compiled #
+###################
+*.class
+target
+target-eclipse
+
+# Logs #
+###################
+*.log
+
+
+
+
+*.metadata.nohr
