@@ -1,4 +1,4 @@
-# Eclipse #
+# Eclipse / SpringSource Toolkit #
 ###################
 .metadata
 Servers
@@ -7,17 +7,14 @@ Servers
 .settings
 target-eclipse
 
+
 # Compiled #
 ###################
 *.class
 target
 target-eclipse
 
+
 # Logs #
 ###################
 *.log
-
-
-
-
-*.metadata.nohr
