@@ -11,14 +11,7 @@ import org.junit.*
 @TestFor(User)
 class UserTests {
 
-	void testSimpleConstraints() {
-		mockForConstraintsTests(User)
-		def user = new User(login:"someone",
-				password:"blah",
-				role:"SuperUser")
-		// oops—role should be either 'admin' or 'user'
-		// will the validation pick that up?
-		assertFalse user.validate()
-		assertEquals "inList", user.errors["role"]
-	}
+    void testSomething() {
+       fail "Implement me"
+    }
 }
