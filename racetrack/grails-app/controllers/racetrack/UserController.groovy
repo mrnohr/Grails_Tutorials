@@ -101,6 +101,25 @@ class UserController {
         }
     }
 	
+	def beforeInterceptor = [action:this.&auth,
+		except:[
+			'login',
+			'logout',
+			'authenticate'
+		]]
+	
+	def auth() {
+		if(!session.user) {
+			redirect(controller:"user", action:"login")
+			return false
+		}
+		if(!session.user.admin){
+			flash.message = "Tsk tsk—admins only"
+			redirect(controller:"race", action:"list")
+			return false
+		}
+	}
+	
 	def login = {}
 	def logout = {
 		flash.message = "Goodbye ${session.user.login}"
