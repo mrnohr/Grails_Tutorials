@@ -9,7 +9,7 @@ class Race {
 	BigDecimal distance
 	BigDecimal cost
 	Integer maxRunners = 100000
-
+	
 	static constraints = {
 		name(blank:false, maxSize:50)
 		startDate(validator: {return (it > new Date())})
