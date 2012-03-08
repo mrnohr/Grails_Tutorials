@@ -1,28 +1,25 @@
 package trip.planner
 
 class Airline {
+	static hasMany = [flights:Flight]
 	String name
-	String url
-	String frequentFlyer
-	String notes
-
-	static hasMany = [trip:Trip]
+	String iata
+	String frequentFlier
 
 	static constraints = {
 		name(blank:false, maxSize:100)
-		url(url:true)
-		frequentFlyer(blank:true)
-		notes(maxSize:1500)
+		iata(blanke:true)
+		frequentFlier(blank:true)
 	}
-	
+
 	static mapping = {
 		table 'some_other_table_name'
 		columns {
-		  name column:'airline_name'
-		  url column:'link'
-		  frequentFlyer column:'ff_id'
+			name column:'airline_name'
+			iata column:'iata'
+			frequentFlier column:'ff_id'
 		}
-	  }
+	}
 
 	String toString() {
 		return name
