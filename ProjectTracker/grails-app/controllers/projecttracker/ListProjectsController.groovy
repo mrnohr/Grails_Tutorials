@@ -2,7 +2,11 @@ package projecttracker
 
 class ListProjectsController {
 
-    def index = { 
+	def index = {
+		redirect(action: current)
+	}
+	
+    def current = { 
 		render "Project Tracker video tutorials"
 	}
 	
