@@ -7,7 +7,9 @@ class ListProjectsController {
 	}
 	
     def current = { 
-		render "Project Tracker video tutorials"
+		def projectName = "Project Tracker video tutorials"
+		def dueDate = "3/8/11"
+		[project:projectName, date:dueDate]
 	}
 	
 	def overdue = {
